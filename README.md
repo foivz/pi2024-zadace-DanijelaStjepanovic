@@ -5,7 +5,7 @@
 
 Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 ------------  | ------------------- | ----- | ---------------------
-Danijela Stjepanović | dstjepano22@foi.hr | 81578942856 | DanijelaStjepanovic
+Danijela Stjepanović | dstjepano22@foi.hr | 0016159297 | DanijelaStjepanovic
 
 
 ## Opis domene
