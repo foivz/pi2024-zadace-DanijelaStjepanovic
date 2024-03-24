@@ -19,4 +19,4 @@ Zadatak se nalazi [ovdje](https://github.com/foivz/pi2024-zadace-DanijelaStjepan
 
 ## Resursi
 Resursi se nalaze [ovdje](https://github.com/foivz/pi2024-zadace-DanijelaStjepanovic/tree/master/Documentation).
-Svi resursi nalaze se u mapi ]_Documentation_](https://github.com/foivz/pi2024-zadace-DanijelaStjepanovic/tree/master/Documentation).
+Svi resursi nalaze se u mapi [_Documentation_](https://github.com/foivz/pi2024-zadace-DanijelaStjepanovic/tree/master/Documentation).
