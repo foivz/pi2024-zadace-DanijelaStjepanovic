@@ -18,6 +18,5 @@ Zadatak je poboljsati zadovoljstvo studenata u varaždinskom studentskom restora
 Zadatak se nalazi [ovdje](https://github.com/foivz/pi2024-zadace-DanijelaStjepanovic/blob/master/Documentation/Zadatak%20-%20SCVZ.pdf).
 
 ## Resursi
-(Zadaće je obvezno predati u obliku Wiki stranica na ovom repozitoriju. Slike i druge artefakte koje ćete koristiti na wiki stranicama smjestite u mapu dokumentacije u repozitoriju!)
 Resursi se nalaze [ovdje](https://github.com/foivz/pi2024-zadace-DanijelaStjepanovic/tree/master/Documentation).
-Svi resursi nalaze se u mapi _Documentation_.
+Svi resursi nalaze se u mapi ]_Documentation_](https://github.com/foivz/pi2024-zadace-DanijelaStjepanovic/tree/master/Documentation).
