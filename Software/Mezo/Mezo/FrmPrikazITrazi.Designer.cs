@@ -60,6 +60,7 @@
             this.dgvPregledRecenzija.Name = "dgvPregledRecenzija";
             this.dgvPregledRecenzija.Size = new System.Drawing.Size(476, 375);
             this.dgvPregledRecenzija.TabIndex = 2;
+            this.dgvPregledRecenzija.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPregledRecenzija_CellContentClick);
             // 
             // btnDodaj
             // 

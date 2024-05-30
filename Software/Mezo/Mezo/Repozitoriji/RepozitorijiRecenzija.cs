@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Mezo.Repozitoriji
 {
-    internal class RepozitorijiRecenzija
+    public class RepozitorijiRecenzija
     {
         public static List<Recenzija> GetRecenzija()
         {
