@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Mezo
 {
-    public partial class Form1 : Form
+    public partial class FrmPrikazITrazi : Form
     {
-        public Form1()
+        public FrmPrikazITrazi()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
