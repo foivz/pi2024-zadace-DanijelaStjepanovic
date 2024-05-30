@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DBLayer;
+using Mezo.Repozitoriji;
 
 namespace Mezo
 {
@@ -16,27 +18,29 @@ namespace Mezo
         public FrmPrikazITrazi()
         {
             InitializeComponent();
+            
+            UcitajRecenzije();
+            
         }
 
-        private void FrmUcitaj_Recenzije(object sender, EventArgs e)
-        {
-            UcitajRecenzije();
-        }
+        
 
         private void UcitajRecenzije()
 
         {
-            List<Recenzija> recenzije = Repozitoriji.RepozitorijiRecenzija.GetRecenzija();
-            dgvPregledRecenzija.DataSource = recenzije;
-
-            dgvPregledRecenzija.Columns["IdRecenzije"].DisplayIndex = 0;
-            dgvPregledRecenzija.Columns["DatumRecenzije"].DisplayIndex = 1;
-            dgvPregledRecenzija.Columns["IdJelo"].DisplayIndex = 2;
-            dgvPregledRecenzija.Columns["OcjenaOkusa"].DisplayIndex = 3;
-            dgvPregledRecenzija.Columns["OcjenaKolicina"].DisplayIndex = 4;
-            dgvPregledRecenzija.Columns["Komentar"].DisplayIndex = 5;
+            
+            var recenzija = RepozitorijiRecenzija.GetRecenzija();
+            
+            dgvPregledRecenzija.DataSource = recenzija;
+            
+           dgvPregledRecenzija.AutoGenerateColumns = true;
         }
         private void dgvPregledRecenzija_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void FrmPrikazITrazi_Load(object sender, EventArgs e)
         {
 
         }

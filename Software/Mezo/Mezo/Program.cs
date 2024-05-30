@@ -15,7 +15,7 @@ namespace Mezo
         [STAThread]
         static void Main()
         {
-            DB.SetConfiguration(" PI2324_dstjepano22_DB", "PI2324_dstjepano22_User", "k^DnS*]@");
+            DB.SetConfiguration("PI2324_dstjepano22_DB", "PI2324_dstjepano22_User", "k^DnS*]@");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmPrikazITrazi());

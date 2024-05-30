@@ -58,6 +58,7 @@
             this.dgvPregledRecenzija.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPregledRecenzija.Location = new System.Drawing.Point(296, 24);
             this.dgvPregledRecenzija.Name = "dgvPregledRecenzija";
+            this.dgvPregledRecenzija.ReadOnly = true;
             this.dgvPregledRecenzija.Size = new System.Drawing.Size(476, 375);
             this.dgvPregledRecenzija.TabIndex = 2;
             this.dgvPregledRecenzija.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPregledRecenzija_CellContentClick);
@@ -102,6 +103,7 @@
             this.Controls.Add(this.lblTrazi);
             this.Name = "FrmPrikazITrazi";
             this.Text = "FrmPrikazITrazi";
+            this.Load += new System.EventHandler(this.FrmPrikazITrazi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPregledRecenzija)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

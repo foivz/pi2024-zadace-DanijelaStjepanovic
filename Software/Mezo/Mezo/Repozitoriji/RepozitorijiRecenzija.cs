@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Mezo.Repozitoriji
 {
@@ -13,11 +14,14 @@ namespace Mezo.Repozitoriji
     {
         public static List<Recenzija> GetRecenzija()
         {
+            
             var recenzije = new List<Recenzija>();
-
-            string sql = "SELECT * FROM Recenzija";
+            
+            string sql = "SELECT * FROM dbo.Recenzija";
+            
             DB.OpenConnection();
-            var reader = DB.GetDataReader(sql);
+
+            var reader = DB.GetDataReader(sql); 
             while (reader.Read())
             {
                 Recenzija recenzija = CreateObject(reader);
@@ -34,7 +38,7 @@ namespace Mezo.Repozitoriji
         {
             var recenzije = new List<Recenzija>();
 
-            string sql = $"SELECT * FROM Recenzija WHERE OcjenaOkusa LIKE '%{pretrazivanje}%'";
+            string sql = $"SELECT * FROM dbo.Recenzija WHERE OcjenaOkusa LIKE '%{pretrazivanje}%'";
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
             while (reader.Read())
@@ -52,18 +56,18 @@ namespace Mezo.Repozitoriji
         private static Recenzija CreateObject(SqlDataReader reader)
         {
             int idRecenzija = int.Parse(reader["Id_Recenzija"].ToString());
-            int datumRecenzije = int.Parse(reader["DatumRecenzije"].ToString());
+            DateTime datumRecenzije = DateTime.Parse(reader["DatumRecenzije"].ToString());
             int idJelo = int.Parse(reader["Id_Jelo"].ToString());
             int ocjenaOkusa = int.Parse(reader["OcjenaOkusa"].ToString());
             int ocjenaKolicina = int.Parse(reader["OcjenaKolicina"].ToString());
             string komentar = reader["Komentar"].ToString();
             var recenzija = new Recenzija
             {
-                Id_Recenzija = idRecenzija.ToString(),
-                DatumRecenzije = datumRecenzije.ToString(),
-                Id_Jelo = idJelo.ToString(),
-                OcjenaOkusa = ocjenaOkusa.ToString(),
-                OcjenaKolicina = ocjenaKolicina.ToString(),
+                Id_Recenzija = idRecenzija,
+                DatumRecenzije = datumRecenzije,
+                Id_Jelo = idJelo,
+                OcjenaOkusa = ocjenaOkusa,
+                OcjenaKolicina = ocjenaKolicina,
                 Komentar = komentar
             };
             return recenzija;
