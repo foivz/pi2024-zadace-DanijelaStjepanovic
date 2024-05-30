@@ -77,8 +77,18 @@ namespace Mezo
 
         private void btnBrisi_Click(object sender, EventArgs e)
         {
-           
+            Recenzija selectedRecenzija = dgvPregledRecenzija.CurrentRow.DataBoundItem as Recenzija;
+            if (selectedRecenzija != null)
+            {
+                int idRecenzija = selectedRecenzija.Id_Recenzija;
+                string sql = $"DELETE FROM dbo.Recenzija WHERE Id_Recenzija={idRecenzija}";
+                DB.OpenConnection();
+                DB.ExecuteCommand(sql);
+                DB.CloseConnection();
+                UcitajRecenzije();
+            }
         }
+
 
         private void btnPretrazi_Click(object sender, EventArgs e)
         {
