@@ -50,6 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAzurirajRecenziju.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAzurirajRecenziju.Designer.cs">
+      <DependentUpon>FrmAzurirajRecenziju.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDodajRecenziju.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDodajRecenziju.Designer.cs">
+      <DependentUpon>FrmDodajRecenziju.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPrikazITrazi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +74,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repozitoriji\RepozitorijiKonzumiranihJela.cs" />
     <Compile Include="Repozitoriji\RepozitorijiRecenzija.cs" />
+    <EmbeddedResource Include="FrmDodajRecenziju.resx">
+      <DependentUpon>FrmDodajRecenziju.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPrikazITrazi.resx">
       <DependentUpon>FrmPrikazITrazi.cs</DependentUpon>
     </EmbeddedResource>
