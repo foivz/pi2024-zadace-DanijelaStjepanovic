@@ -1,5 +1,8 @@
-﻿using System;
+﻿using DBLayer;
+using Mezo.Models;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,5 +11,62 @@ namespace Mezo.Repozitoriji
 {
     internal class RepozitorijiRecenzija
     {
+        public static List<Recenzija> GetRecenzija()
+        {
+            var recenzije = new List<Recenzija>();
+
+            string sql = "SELECT * FROM Recenzija";
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
+            while (reader.Read())
+            {
+                Recenzija recenzija = CreateObject(reader);
+                recenzije.Add(recenzija);
+            }
+
+            reader.Close();
+            DB.CloseConnection();
+
+            return recenzije;
+        }
+
+        public static List<Recenzija> SearchRecenzije(string pretrazivanje)
+        {
+            var recenzije = new List<Recenzija>();
+
+            string sql = $"SELECT * FROM Recenzija WHERE OcjenaOkusa LIKE '%{pretrazivanje}%'";
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
+            while (reader.Read())
+            {
+                Recenzija recenzija = CreateObject(reader);
+                recenzije.Add(recenzija);
+            }
+
+            reader.Close();
+            DB.CloseConnection();
+
+            return recenzije;
+        }
+
+        private static Recenzija CreateObject(SqlDataReader reader)
+        {
+            int idRecenzija = int.Parse(reader["Id_Recenzija"].ToString());
+            int datumRecenzije = int.Parse(reader["DatumRecenzije"].ToString());
+            int idJelo = int.Parse(reader["Id_Jelo"].ToString());
+            int ocjenaOkusa = int.Parse(reader["OcjenaOkusa"].ToString());
+            int ocjenaKolicina = int.Parse(reader["OcjenaKolicina"].ToString());
+            string komentar = reader["Komentar"].ToString();
+            var recenzija = new Recenzija
+            {
+                Id_Recenzija = idRecenzija.ToString(),
+                DatumRecenzije = datumRecenzije.ToString(),
+                Id_Jelo = idJelo.ToString(),
+                OcjenaOkusa = ocjenaOkusa.ToString(),
+                OcjenaKolicina = ocjenaKolicina.ToString(),
+                Komentar = komentar
+            };
+            return recenzija;
+        }
     }
 }

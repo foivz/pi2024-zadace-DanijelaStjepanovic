@@ -18,7 +18,7 @@ namespace Mezo
             DB.SetConfiguration(" PI2324_dstjepano22_DB", "PI2324_dstjepano22_User", "k^DnS*]@");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FrmPrikazITrazi());
         }
     }
 }
