@@ -55,6 +55,8 @@
     <Compile Include="FrmPrikazITrazi.Designer.cs">
       <DependentUpon>FrmPrikazITrazi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\KonzumiranaJela.cs" />
+    <Compile Include="Models\Recenzija.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmPrikazITrazi.resx">
@@ -83,7 +85,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Klase\" />
+    <Folder Include="Repozitoriji\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
