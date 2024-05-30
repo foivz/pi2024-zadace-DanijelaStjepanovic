@@ -64,8 +64,16 @@ namespace Mezo
 
         private void btnAzuriraj_Click(object sender, EventArgs e)
         {
-            
+            Recenzija selectedRecenzija = dgvPregledRecenzija.CurrentRow.DataBoundItem as Recenzija;
+            if (selectedRecenzija != null)
+            {
+                FrmAzurirajRecenziju frmAzurirajRecenziju = new FrmAzurirajRecenziju();
+                Hide();
+                frmAzurirajRecenziju.ShowDialog();
+                Close();
+            }
         }
+
 
         private void btnBrisi_Click(object sender, EventArgs e)
         {
