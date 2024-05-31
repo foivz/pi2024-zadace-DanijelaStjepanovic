@@ -59,6 +59,7 @@
             this.txtSifraRecenzije.Name = "txtSifraRecenzije";
             this.txtSifraRecenzije.Size = new System.Drawing.Size(299, 20);
             this.txtSifraRecenzije.TabIndex = 1;
+            this.txtSifraRecenzije.TextChanged += new System.EventHandler(this.txtSifraRecenzije_TextChanged);
             // 
             // lblGlavnoJelo
             // 
@@ -155,6 +156,7 @@
             this.btnSpremi.TabIndex = 12;
             this.btnSpremi.Text = "Spremi";
             this.btnSpremi.UseVisualStyleBackColor = true;
+            this.btnSpremi.Click += new System.EventHandler(this.btnSpremi_Click);
             // 
             // btnOdustani
             // 
@@ -164,6 +166,7 @@
             this.btnOdustani.TabIndex = 13;
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.UseVisualStyleBackColor = true;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
             // FrmDodajRecenziju
             // 

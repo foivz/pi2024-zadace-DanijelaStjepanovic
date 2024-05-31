@@ -153,6 +153,7 @@
             this.txtOcjenaKolicina.Name = "txtOcjenaKolicina";
             this.txtOcjenaKolicina.Size = new System.Drawing.Size(299, 20);
             this.txtOcjenaKolicina.TabIndex = 16;
+            this.txtOcjenaKolicina.TextChanged += new System.EventHandler(this.txtOcjenaKolicina_TextChanged);
             // 
             // txtOcjenaOkusa
             // 
@@ -160,6 +161,7 @@
             this.txtOcjenaOkusa.Name = "txtOcjenaOkusa";
             this.txtOcjenaOkusa.Size = new System.Drawing.Size(299, 20);
             this.txtOcjenaOkusa.TabIndex = 15;
+            this.txtOcjenaOkusa.TextChanged += new System.EventHandler(this.txtOcjenaOkusa_TextChanged);
             // 
             // FrmAzurirajRecenziju
             // 
