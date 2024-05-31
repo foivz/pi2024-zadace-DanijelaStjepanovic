@@ -77,6 +77,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(299, 20);
             this.textBox1.TabIndex = 6;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lblSifraRecenzije
             // 
@@ -109,6 +110,7 @@
             // 
             this.txtDatumRecenzije.Location = new System.Drawing.Point(251, 308);
             this.txtDatumRecenzije.Name = "txtDatumRecenzije";
+            this.txtDatumRecenzije.ReadOnly = true;
             this.txtDatumRecenzije.Size = new System.Drawing.Size(299, 20);
             this.txtDatumRecenzije.TabIndex = 21;
             // 

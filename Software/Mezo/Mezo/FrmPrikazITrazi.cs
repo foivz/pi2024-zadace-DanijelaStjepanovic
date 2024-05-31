@@ -67,7 +67,7 @@ namespace Mezo
             Recenzija selectedRecenzija = dgvPregledRecenzija.CurrentRow.DataBoundItem as Recenzija;
             if (selectedRecenzija != null)
             {
-                FrmAzurirajRecenziju frmAzurirajRecenziju = new FrmAzurirajRecenziju();
+                FrmAzurirajRecenziju frmAzurirajRecenziju = new FrmAzurirajRecenziju(selectedRecenzija);
                 Hide();
                 frmAzurirajRecenziju.ShowDialog();
                 Close();

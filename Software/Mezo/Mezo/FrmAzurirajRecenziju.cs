@@ -1,4 +1,5 @@
 ﻿using DBLayer;
+using Mezo.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,15 +15,39 @@ namespace Mezo
 {
     public partial class FrmAzurirajRecenziju : Form
     {
-        public FrmAzurirajRecenziju()
+        private Recenzija recenzija;
+        public Recenzija SelectedRecenzija { get => recenzija; set => recenzija = value; }
+        public FrmAzurirajRecenziju(Recenzija selectedRecenzija)
         {
             InitializeComponent();
+            
             UcitajKonzumiranaJela();
             txtDatumRecenzije.Text = DateTime.Now.ToString("dd.MM.yyyy.");
-        }
+            SelectedRecenzija = selectedRecenzija;
 
+        }
+        
+       
+       
+        
         private void FrmAzurirajRecenziju_Load(object sender, EventArgs e)
         {
+            if (SelectedRecenzija != null)
+            {
+                int idRecenzija = SelectedRecenzija.Id_Recenzija;
+                int ocjenaOkusa = SelectedRecenzija.OcjenaOkusa;
+                int ocjenaKolicina = SelectedRecenzija.OcjenaKolicina;
+                string komentar = SelectedRecenzija.Komentar;
+                string glavnoJelo = cboGlavnoJelo.SelectedValue.ToString();
+
+
+                textBox1.Text = idRecenzija.ToString();
+                cboGlavnoJelo.Text = glavnoJelo.ToString();
+                txtOcjenaOkusa.Text = ocjenaOkusa.ToString();
+                txtOcjenaKolicina.Text = ocjenaKolicina.ToString();
+                txtKomentar.Text = komentar;
+            }
+            
 
         }
         private void UcitajKonzumiranaJela()
@@ -78,6 +103,11 @@ namespace Mezo
                 MessageBox.Show("Unos nije valjan! Probaj unijeti broj između 1 i 5!");
                 txtOcjenaKolicina.Text = string.Empty;
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
