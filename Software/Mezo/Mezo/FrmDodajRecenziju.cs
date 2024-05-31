@@ -18,6 +18,7 @@ namespace Mezo
         {
             InitializeComponent();
             UcitajKonzumiranaJela();
+            txtDatumRecenzije.Text = DateTime.Now.ToString("dd.MM.yyyy.");
         }
 
         private void FrmDodajRecenziju_Load(object sender, EventArgs e)
@@ -40,6 +41,62 @@ namespace Mezo
             reader.Close();
 
             DB.CloseConnection();
+        }
+
+        private void txtOcjenaOkusa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtOcjenaOkusa_TextChanged(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtOcjenaOkusa.Text, out int value))
+            {
+                if (value < 1 || value > 5)
+                {
+                    
+                    txtOcjenaOkusa.Text = string.Empty;
+                }
+            }
+            else
+            {
+               
+                txtOcjenaOkusa.Text = string.Empty;
+            }
+        }
+        private void txtOcjenaKolicina_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        private void txtOcjenaKolicina_TextChanged(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtOcjenaKolicina.Text, out int value))
+            {
+                if (value < 1 || value > 5)
+                {
+
+                    txtOcjenaKolicina.Text = string.Empty;
+                }
+            }
+            else
+            {
+
+                txtOcjenaKolicina.Text = string.Empty;
+            }
+
+        }
+
+        private void txtDatumRecenzije_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

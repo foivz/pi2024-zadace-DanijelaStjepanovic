@@ -74,6 +74,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repozitoriji\RepozitorijiKonzumiranihJela.cs" />
     <Compile Include="Repozitoriji\RepozitorijiRecenzija.cs" />
+    <EmbeddedResource Include="FrmAzurirajRecenziju.resx">
+      <DependentUpon>FrmAzurirajRecenziju.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDodajRecenziju.resx">
       <DependentUpon>FrmDodajRecenziju.cs</DependentUpon>
     </EmbeddedResource>
