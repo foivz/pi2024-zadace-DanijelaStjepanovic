@@ -59,5 +59,15 @@ namespace Mezo.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mezo_bez_pozadine {
+            get {
+                object obj = ResourceManager.GetObject("mezo bez pozadine", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

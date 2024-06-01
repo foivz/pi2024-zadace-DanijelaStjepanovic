@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrikazITrazi));
             this.lblTraziNaTemelju = new System.Windows.Forms.Label();
             this.txtTraziOkus = new System.Windows.Forms.TextBox();
             this.dgvPregledRecenzija = new System.Windows.Forms.DataGridView();
@@ -36,15 +37,19 @@
             this.btnBrisi = new System.Windows.Forms.Button();
             this.btnPretrazi = new System.Windows.Forms.Button();
             this.txtTraziKolicina = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPregledRecenzija)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTraziNaTemelju
             // 
             this.lblTraziNaTemelju.AutoSize = true;
+            this.lblTraziNaTemelju.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTraziNaTemelju.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblTraziNaTemelju.Location = new System.Drawing.Point(23, 39);
             this.lblTraziNaTemelju.Name = "lblTraziNaTemelju";
-            this.lblTraziNaTemelju.Size = new System.Drawing.Size(84, 13);
+            this.lblTraziNaTemelju.Size = new System.Drawing.Size(120, 19);
             this.lblTraziNaTemelju.TabIndex = 0;
             this.lblTraziNaTemelju.Text = "Trazi na temelju:";
             // 
@@ -117,11 +122,23 @@
             this.txtTraziKolicina.TabIndex = 7;
             this.txtTraziKolicina.Text = "Ocjena kolicine";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Mezo.Properties.Resources.mezo_bez_pozadine;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 226);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(215, 194);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmPrikazITrazi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtTraziKolicina);
             this.Controls.Add(this.btnPretrazi);
             this.Controls.Add(this.btnBrisi);
@@ -130,10 +147,12 @@
             this.Controls.Add(this.dgvPregledRecenzija);
             this.Controls.Add(this.txtTraziOkus);
             this.Controls.Add(this.lblTraziNaTemelju);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmPrikazITrazi";
             this.Text = "Recenzije";
             this.Load += new System.EventHandler(this.FrmPrikazITrazi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPregledRecenzija)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,5 +168,6 @@
         private System.Windows.Forms.Button btnBrisi;
         private System.Windows.Forms.Button btnPretrazi;
         private System.Windows.Forms.TextBox txtTraziKolicina;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

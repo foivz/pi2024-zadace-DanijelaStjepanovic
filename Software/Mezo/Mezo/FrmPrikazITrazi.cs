@@ -30,15 +30,23 @@ namespace Mezo
         {
             
             var recenzija = RepozitorijiRecenzija.GetRecenzija();
-            
             dgvPregledRecenzija.DataSource = recenzija;
-            
-           dgvPregledRecenzija.AutoGenerateColumns = true;
+
+            dgvPregledRecenzija.AutoGenerateColumns = true;
+            dgvPregledRecenzija.Columns["Id_Jelo"].Visible = false;
         }
 
-        private void UcitajTrazeneRecenzije()
+        private void UcitajTrazeneRecenzije1()
         {
-            List<Recenzija> recenzije = RepozitorijiRecenzija.SearchRecenzije(txtTraziOkus.Text);
+            List<Recenzija> recenzije = RepozitorijiRecenzija.SearchRecenzije1(txtTraziOkus.Text);
+            dgvPregledRecenzija.DataSource = recenzije;
+
+            dgvPregledRecenzija.AutoGenerateColumns = true;
+        }
+
+        private void UcitajTrazeneRecenzije2()
+        {
+            List<Recenzija> recenzije = RepozitorijiRecenzija.SearchRecenzije2(txtTraziKolicina.Text);
             dgvPregledRecenzija.DataSource = recenzije;
 
             dgvPregledRecenzija.AutoGenerateColumns = true;
@@ -92,10 +100,12 @@ namespace Mezo
         private void btnPretrazi_Click(object sender, EventArgs e)
         {
 
-            string pretrazivanje = txtTraziOkus.Text;
-            if (pretrazivanje != null)
+            string pretrazivanje1 = txtTraziOkus.Text;
+            string pretrazivanje2 = txtTraziOkus.Text;
+            if (pretrazivanje1 != null && pretrazivanje2 != null)
             {
-                UcitajTrazeneRecenzije();
+                UcitajTrazeneRecenzije1();
+                UcitajTrazeneRecenzije2();
             }
 
         }

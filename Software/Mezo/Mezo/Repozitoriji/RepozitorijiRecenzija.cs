@@ -16,12 +16,35 @@ namespace Mezo.Repozitoriji
         {
             
             var recenzije = new List<Recenzija>();
-            
-            string sql = "SELECT * FROM dbo.Recenzija";
-            
+
+            string sql = "SELECT Recenzija.Id_Recenzija, Recenzija.DatumRecenzije, Recenzija.Id_Jelo, KonzumiranoJelo.GlavnoJelo, Recenzija.OcjenaOkusa, Recenzija.OcjenaKolicina, Recenzija.Komentar " +
+                 "FROM dbo.Recenzija INNER JOIN dbo.KonzumiranoJelo ON Recenzija.Id_Jelo = KonzumiranoJelo.Id_Jelo";
+
+
             DB.OpenConnection();
 
             var reader = DB.GetDataReader(sql); 
+            while (reader.Read())
+            {
+              
+                Recenzija recenzija = CreateObject(reader);
+                recenzije.Add(recenzija);
+                
+            }
+
+            reader.Close();
+            DB.CloseConnection();
+
+            return recenzije;
+        }
+
+        public static List<Recenzija> SearchRecenzije1(string pretrazivanje1)
+        {
+            var recenzije = new List<Recenzija>();
+
+            string sql = $"SELECT * FROM Recenzija WHERE OcjenaOkusa LIKE '%{pretrazivanje1}%'";
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
             while (reader.Read())
             {
                 Recenzija recenzija = CreateObject(reader);
@@ -34,11 +57,11 @@ namespace Mezo.Repozitoriji
             return recenzije;
         }
 
-        public static List<Recenzija> SearchRecenzije(string pretrazivanje)
+        public static List<Recenzija> SearchRecenzije2(string pretrazivanje2)
         {
             var recenzije = new List<Recenzija>();
 
-            string sql = $"SELECT * FROM Recenzija WHERE OcjenaOkusa LIKE '%{pretrazivanje}%'";
+            string sql = $"SELECT * FROM Recenzija WHERE OcjenaKolicina LIKE '%{pretrazivanje2}%'";
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
             while (reader.Read())
@@ -61,6 +84,7 @@ namespace Mezo.Repozitoriji
             int ocjenaOkusa = int.Parse(reader["OcjenaOkusa"].ToString());
             int ocjenaKolicina = int.Parse(reader["OcjenaKolicina"].ToString());
             string komentar = reader["Komentar"].ToString();
+            string glavnojelo = reader["GlavnoJelo"].ToString();
             var recenzija = new Recenzija
             {
                 Id_Recenzija = idRecenzija,
@@ -68,7 +92,8 @@ namespace Mezo.Repozitoriji
                 Id_Jelo = idJelo,
                 OcjenaOkusa = ocjenaOkusa,
                 OcjenaKolicina = ocjenaKolicina,
-                Komentar = komentar
+                Komentar = komentar,
+                GlavnoJelo = glavnojelo,
             };
             return recenzija;
         }

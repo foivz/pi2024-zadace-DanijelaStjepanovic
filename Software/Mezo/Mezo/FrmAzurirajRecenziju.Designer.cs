@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAzurirajRecenziju));
             this.lblOcjenaOkusa = new System.Windows.Forms.Label();
             this.cboGlavnoJelo = new System.Windows.Forms.ComboBox();
             this.lblGlavnoJelo = new System.Windows.Forms.Label();
@@ -47,9 +48,12 @@
             // lblOcjenaOkusa
             // 
             this.lblOcjenaOkusa.AutoSize = true;
-            this.lblOcjenaOkusa.Location = new System.Drawing.Point(159, 130);
+            this.lblOcjenaOkusa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblOcjenaOkusa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOcjenaOkusa.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblOcjenaOkusa.Location = new System.Drawing.Point(145, 122);
             this.lblOcjenaOkusa.Name = "lblOcjenaOkusa";
-            this.lblOcjenaOkusa.Size = new System.Drawing.Size(76, 13);
+            this.lblOcjenaOkusa.Size = new System.Drawing.Size(107, 21);
             this.lblOcjenaOkusa.TabIndex = 9;
             this.lblOcjenaOkusa.Text = "Ocjena okusa:";
             // 
@@ -65,9 +69,12 @@
             // lblGlavnoJelo
             // 
             this.lblGlavnoJelo.AutoSize = true;
-            this.lblGlavnoJelo.Location = new System.Drawing.Point(159, 88);
+            this.lblGlavnoJelo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblGlavnoJelo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGlavnoJelo.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblGlavnoJelo.Location = new System.Drawing.Point(149, 80);
             this.lblGlavnoJelo.Name = "lblGlavnoJelo";
-            this.lblGlavnoJelo.Size = new System.Drawing.Size(66, 13);
+            this.lblGlavnoJelo.Size = new System.Drawing.Size(96, 21);
             this.lblGlavnoJelo.TabIndex = 7;
             this.lblGlavnoJelo.Text = "Glavno Jelo:";
             // 
@@ -82,15 +89,18 @@
             // lblSifraRecenzije
             // 
             this.lblSifraRecenzije.AutoSize = true;
-            this.lblSifraRecenzije.Location = new System.Drawing.Point(159, 38);
+            this.lblSifraRecenzije.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblSifraRecenzije.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSifraRecenzije.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblSifraRecenzije.Location = new System.Drawing.Point(145, 34);
             this.lblSifraRecenzije.Name = "lblSifraRecenzije";
-            this.lblSifraRecenzije.Size = new System.Drawing.Size(79, 13);
+            this.lblSifraRecenzije.Size = new System.Drawing.Size(115, 21);
             this.lblSifraRecenzije.TabIndex = 5;
             this.lblSifraRecenzije.Text = "Šifra recenzije: ";
             // 
             // btnOdustani
             // 
-            this.btnOdustani.Location = new System.Drawing.Point(415, 370);
+            this.btnOdustani.Location = new System.Drawing.Point(456, 370);
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(176, 49);
             this.btnOdustani.TabIndex = 23;
@@ -127,27 +137,36 @@
             // lblDatumRecenzije
             // 
             this.lblDatumRecenzije.AutoSize = true;
-            this.lblDatumRecenzije.Location = new System.Drawing.Point(159, 308);
+            this.lblDatumRecenzije.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblDatumRecenzije.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDatumRecenzije.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblDatumRecenzije.Location = new System.Drawing.Point(137, 307);
             this.lblDatumRecenzije.Name = "lblDatumRecenzije";
-            this.lblDatumRecenzije.Size = new System.Drawing.Size(86, 13);
+            this.lblDatumRecenzije.Size = new System.Drawing.Size(124, 21);
             this.lblDatumRecenzije.TabIndex = 19;
             this.lblDatumRecenzije.Text = "Datum recenzije:";
             // 
             // lblKomentar
             // 
             this.lblKomentar.AutoSize = true;
-            this.lblKomentar.Location = new System.Drawing.Point(159, 229);
+            this.lblKomentar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblKomentar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKomentar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblKomentar.Location = new System.Drawing.Point(173, 225);
             this.lblKomentar.Name = "lblKomentar";
-            this.lblKomentar.Size = new System.Drawing.Size(55, 13);
+            this.lblKomentar.Size = new System.Drawing.Size(83, 21);
             this.lblKomentar.TabIndex = 18;
             this.lblKomentar.Text = "Komentar:";
             // 
             // lblOcjenaKolicina
             // 
             this.lblOcjenaKolicina.AutoSize = true;
-            this.lblOcjenaKolicina.Location = new System.Drawing.Point(159, 174);
+            this.lblOcjenaKolicina.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblOcjenaKolicina.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOcjenaKolicina.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblOcjenaKolicina.Location = new System.Drawing.Point(140, 173);
             this.lblOcjenaKolicina.Name = "lblOcjenaKolicina";
-            this.lblOcjenaKolicina.Size = new System.Drawing.Size(83, 13);
+            this.lblOcjenaKolicina.Size = new System.Drawing.Size(119, 21);
             this.lblOcjenaKolicina.TabIndex = 17;
             this.lblOcjenaKolicina.Text = "Ocjena količine:";
             // 
@@ -171,6 +190,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnSpremi);
@@ -186,6 +206,7 @@
             this.Controls.Add(this.lblGlavnoJelo);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblSifraRecenzije);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmAzurirajRecenziju";
             this.Text = "Ažuriraj postojeću recenziju";
             this.Load += new System.EventHandler(this.FrmAzurirajRecenziju_Load);

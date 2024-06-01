@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDodajRecenziju));
             this.lblSifraRecenzije = new System.Windows.Forms.Label();
             this.txtSifraRecenzije = new System.Windows.Forms.TextBox();
             this.lblGlavnoJelo = new System.Windows.Forms.Label();
@@ -47,9 +48,11 @@
             // lblSifraRecenzije
             // 
             this.lblSifraRecenzije.AutoSize = true;
-            this.lblSifraRecenzije.Location = new System.Drawing.Point(158, 35);
+            this.lblSifraRecenzije.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSifraRecenzije.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblSifraRecenzije.Location = new System.Drawing.Point(136, 33);
             this.lblSifraRecenzije.Name = "lblSifraRecenzije";
-            this.lblSifraRecenzije.Size = new System.Drawing.Size(79, 13);
+            this.lblSifraRecenzije.Size = new System.Drawing.Size(113, 19);
             this.lblSifraRecenzije.TabIndex = 0;
             this.lblSifraRecenzije.Text = "Šifra recenzije: ";
             // 
@@ -64,9 +67,11 @@
             // lblGlavnoJelo
             // 
             this.lblGlavnoJelo.AutoSize = true;
-            this.lblGlavnoJelo.Location = new System.Drawing.Point(158, 85);
+            this.lblGlavnoJelo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGlavnoJelo.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblGlavnoJelo.Location = new System.Drawing.Point(136, 83);
             this.lblGlavnoJelo.Name = "lblGlavnoJelo";
-            this.lblGlavnoJelo.Size = new System.Drawing.Size(66, 13);
+            this.lblGlavnoJelo.Size = new System.Drawing.Size(94, 19);
             this.lblGlavnoJelo.TabIndex = 2;
             this.lblGlavnoJelo.Text = "Glavno Jelo:";
             // 
@@ -82,9 +87,11 @@
             // lblOcjenaOkusa
             // 
             this.lblOcjenaOkusa.AutoSize = true;
-            this.lblOcjenaOkusa.Location = new System.Drawing.Point(158, 127);
+            this.lblOcjenaOkusa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOcjenaOkusa.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblOcjenaOkusa.Location = new System.Drawing.Point(136, 125);
             this.lblOcjenaOkusa.Name = "lblOcjenaOkusa";
-            this.lblOcjenaOkusa.Size = new System.Drawing.Size(76, 13);
+            this.lblOcjenaOkusa.Size = new System.Drawing.Size(105, 19);
             this.lblOcjenaOkusa.TabIndex = 4;
             this.lblOcjenaOkusa.Text = "Ocjena okusa:";
             // 
@@ -107,27 +114,33 @@
             // lblOcjenaKolicina
             // 
             this.lblOcjenaKolicina.AutoSize = true;
-            this.lblOcjenaKolicina.Location = new System.Drawing.Point(158, 175);
+            this.lblOcjenaKolicina.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOcjenaKolicina.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblOcjenaKolicina.Location = new System.Drawing.Point(136, 173);
             this.lblOcjenaKolicina.Name = "lblOcjenaKolicina";
-            this.lblOcjenaKolicina.Size = new System.Drawing.Size(83, 13);
+            this.lblOcjenaKolicina.Size = new System.Drawing.Size(117, 19);
             this.lblOcjenaKolicina.TabIndex = 7;
             this.lblOcjenaKolicina.Text = "Ocjena količine:";
             // 
             // lblKomentar
             // 
             this.lblKomentar.AutoSize = true;
-            this.lblKomentar.Location = new System.Drawing.Point(158, 230);
+            this.lblKomentar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKomentar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblKomentar.Location = new System.Drawing.Point(136, 228);
             this.lblKomentar.Name = "lblKomentar";
-            this.lblKomentar.Size = new System.Drawing.Size(55, 13);
+            this.lblKomentar.Size = new System.Drawing.Size(81, 19);
             this.lblKomentar.TabIndex = 8;
             this.lblKomentar.Text = "Komentar:";
             // 
             // lblDatumRecenzije
             // 
             this.lblDatumRecenzije.AutoSize = true;
-            this.lblDatumRecenzije.Location = new System.Drawing.Point(158, 309);
+            this.lblDatumRecenzije.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDatumRecenzije.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblDatumRecenzije.Location = new System.Drawing.Point(136, 307);
             this.lblDatumRecenzije.Name = "lblDatumRecenzije";
-            this.lblDatumRecenzije.Size = new System.Drawing.Size(86, 13);
+            this.lblDatumRecenzije.Size = new System.Drawing.Size(122, 19);
             this.lblDatumRecenzije.TabIndex = 9;
             this.lblDatumRecenzije.Text = "Datum recenzije:";
             // 
@@ -160,7 +173,7 @@
             // 
             // btnOdustani
             // 
-            this.btnOdustani.Location = new System.Drawing.Point(414, 371);
+            this.btnOdustani.Location = new System.Drawing.Point(431, 371);
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(176, 49);
             this.btnOdustani.TabIndex = 13;
@@ -172,6 +185,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnSpremi);
@@ -187,6 +201,7 @@
             this.Controls.Add(this.lblGlavnoJelo);
             this.Controls.Add(this.txtSifraRecenzije);
             this.Controls.Add(this.lblSifraRecenzije);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmDodajRecenziju";
             this.Text = "Nova Recenzija";
             this.Load += new System.EventHandler(this.FrmDodajRecenziju_Load);
