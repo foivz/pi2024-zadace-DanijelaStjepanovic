@@ -38,11 +38,10 @@ namespace Mezo
 
         private void UcitajTrazeneRecenzije()
         {
-            List<Recenzija> recenzije = RepozitorijiRecenzija.SearchRecenzije(txtTrazi.Text);
+            List<Recenzija> recenzije = RepozitorijiRecenzija.SearchRecenzije(txtTraziOkus.Text);
             dgvPregledRecenzija.DataSource = recenzije;
 
             dgvPregledRecenzija.AutoGenerateColumns = true;
-
         }
         private void dgvPregledRecenzija_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -93,11 +92,16 @@ namespace Mezo
         private void btnPretrazi_Click(object sender, EventArgs e)
         {
 
-            string pretrazivanje = txtTrazi.Text;
+            string pretrazivanje = txtTraziOkus.Text;
             if (pretrazivanje != null)
             {
                 UcitajTrazeneRecenzije();
             }
+
+        }
+
+        private void txtTrazi_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

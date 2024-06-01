@@ -109,5 +109,32 @@ namespace Mezo
         {
 
         }
+
+        private void btnSpremi_Click(object sender, EventArgs e)
+        {
+            int idRecenzija = int.Parse(textBox1.Text);
+            string datumRecenzije = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            string glavnoJelo = cboGlavnoJelo.SelectedValue.ToString();
+            int ocjenaOkusa = int.Parse(txtOcjenaOkusa.Text);
+            int ocjenaKolicina = int.Parse(txtOcjenaKolicina.Text);
+            string komentar = txtKomentar.Text;
+
+            string sql = $"INSERT INTO dbo.Recenzija (Id_Recenzija, DatumRecenzije, Id_Jelo, OcjenaOkusa, OcjenaKolicina, Komentar) VALUES ('{idRecenzija}', '{datumRecenzije}', '{glavnoJelo}', '{ocjenaOkusa}', '{ocjenaKolicina}', '{komentar}')";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+            FrmPrikazITrazi frmPrikazITrazi = new FrmPrikazITrazi();
+            Hide();
+            frmPrikazITrazi.ShowDialog();
+            Close();
+        }
+
+        private void btnOdustani_Click(object sender, EventArgs e)
+        {
+            FrmPrikazITrazi frmPrikazITrazi = new FrmPrikazITrazi();
+            Hide();
+            frmPrikazITrazi.ShowDialog();
+            Close();
+        }
     }
 }

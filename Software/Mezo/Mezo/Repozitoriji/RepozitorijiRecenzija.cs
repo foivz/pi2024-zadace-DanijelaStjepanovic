@@ -38,7 +38,7 @@ namespace Mezo.Repozitoriji
         {
             var recenzije = new List<Recenzija>();
 
-            string sql = $"SELECT * FROM dbo.Recenzija WHERE OcjenaOkusa LIKE '%{pretrazivanje}%'";
+            string sql = $"SELECT * FROM Recenzija WHERE OcjenaOkusa LIKE '%{pretrazivanje}%'";
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
             while (reader.Read())
