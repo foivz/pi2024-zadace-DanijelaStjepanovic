@@ -100,22 +100,28 @@
             // 
             // btnOdustani
             // 
+            this.btnOdustani.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnOdustani.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOdustani.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnOdustani.Location = new System.Drawing.Point(456, 370);
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(176, 49);
             this.btnOdustani.TabIndex = 23;
             this.btnOdustani.Text = "Odustani";
-            this.btnOdustani.UseVisualStyleBackColor = true;
+            this.btnOdustani.UseVisualStyleBackColor = false;
             this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
             // btnSpremi
             // 
+            this.btnSpremi.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSpremi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSpremi.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnSpremi.Location = new System.Drawing.Point(126, 370);
             this.btnSpremi.Name = "btnSpremi";
             this.btnSpremi.Size = new System.Drawing.Size(176, 49);
             this.btnSpremi.TabIndex = 22;
             this.btnSpremi.Text = "Spremi";
-            this.btnSpremi.UseVisualStyleBackColor = true;
+            this.btnSpremi.UseVisualStyleBackColor = false;
             this.btnSpremi.Click += new System.EventHandler(this.btnSpremi_Click);
             // 
             // txtDatumRecenzije
@@ -206,7 +212,9 @@
             this.Controls.Add(this.lblGlavnoJelo);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblSifraRecenzije);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FrmAzurirajRecenziju";
             this.Text = "Ažuriraj postojeću recenziju";
             this.Load += new System.EventHandler(this.FrmAzurirajRecenziju_Load);

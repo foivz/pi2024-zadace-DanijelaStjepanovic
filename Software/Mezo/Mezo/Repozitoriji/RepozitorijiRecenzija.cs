@@ -17,8 +17,7 @@ namespace Mezo.Repozitoriji
             
             var recenzije = new List<Recenzija>();
 
-            string sql = "SELECT Recenzija.Id_Recenzija, Recenzija.DatumRecenzije, Recenzija.Id_Jelo, KonzumiranoJelo.GlavnoJelo, Recenzija.OcjenaOkusa, Recenzija.OcjenaKolicina, Recenzija.Komentar " +
-                 "FROM dbo.Recenzija INNER JOIN dbo.KonzumiranoJelo ON Recenzija.Id_Jelo = KonzumiranoJelo.Id_Jelo";
+            string sql = "SELECT Recenzija.Id_Recenzija, Recenzija.DatumRecenzije, Recenzija.Id_Jelo, KonzumiranoJelo.GlavnoJelo, Recenzija.OcjenaOkusa, Recenzija.OcjenaKolicina, Recenzija.Komentar FROM dbo.Recenzija JOIN dbo.KonzumiranoJelo ON Recenzija.Id_Jelo = KonzumiranoJelo.Id_Jelo";
 
 
             DB.OpenConnection();
@@ -26,9 +25,10 @@ namespace Mezo.Repozitoriji
             var reader = DB.GetDataReader(sql); 
             while (reader.Read())
             {
-              
+                
                 Recenzija recenzija = CreateObject(reader);
                 recenzije.Add(recenzija);
+
                 
             }
 
@@ -42,7 +42,7 @@ namespace Mezo.Repozitoriji
         {
             var recenzije = new List<Recenzija>();
 
-            string sql = $"SELECT * FROM Recenzija WHERE OcjenaOkusa LIKE '%{pretrazivanje1}%'";
+            string sql = $"SELECT Recenzija.Id_Recenzija, Recenzija.DatumRecenzije, Recenzija.Id_Jelo, KonzumiranoJelo.GlavnoJelo, Recenzija.OcjenaOkusa, Recenzija.OcjenaKolicina, Recenzija.Komentar  FROM dbo.Recenzija JOIN dbo.KonzumiranoJelo ON Recenzija.Id_Jelo = KonzumiranoJelo.Id_Jelo WHERE OcjenaOkusa LIKE '%{pretrazivanje1}%'";
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
             while (reader.Read())
@@ -61,7 +61,7 @@ namespace Mezo.Repozitoriji
         {
             var recenzije = new List<Recenzija>();
 
-            string sql = $"SELECT * FROM Recenzija WHERE OcjenaKolicina LIKE '%{pretrazivanje2}%'";
+            string sql = $"SELECT Recenzija.Id_Recenzija, Recenzija.DatumRecenzije, Recenzija.Id_Jelo, KonzumiranoJelo.GlavnoJelo, Recenzija.OcjenaOkusa, Recenzija.OcjenaKolicina, Recenzija.Komentar  FROM dbo.Recenzija JOIN dbo.KonzumiranoJelo ON Recenzija.Id_Jelo = KonzumiranoJelo.Id_Jelo WHERE OcjenaKolicina LIKE '%{pretrazivanje2}%'";
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
             while (reader.Read())

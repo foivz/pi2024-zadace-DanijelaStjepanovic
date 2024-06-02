@@ -123,6 +123,7 @@ namespace Mezo
             DB.OpenConnection();
             DB.ExecuteCommand(sql);
             DB.CloseConnection();
+
             FrmPrikazITrazi frmPrikazITrazi = new FrmPrikazITrazi();
             Hide();
             frmPrikazITrazi.ShowDialog();

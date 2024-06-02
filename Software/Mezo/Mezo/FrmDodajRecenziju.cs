@@ -103,11 +103,25 @@ namespace Mezo
             DB.OpenConnection();
             DB.ExecuteCommand(sql);
             DB.CloseConnection();
-           
-            FrmPrikazITrazi frmPrikazITrazi = new FrmPrikazITrazi();
-            Hide();
-            frmPrikazITrazi.ShowDialog();
-            Close();
+
+            DialogResult odabir = MessageBox.Show("Uspješno provedena recenzija.. Želite li dodati još jednu recenziju?", "Uspješno dodano", MessageBoxButtons.YesNo);
+
+            
+            if (odabir == DialogResult.Yes)
+            {
+                Hide();
+                FrmDodajRecenziju frmDodajRecenziju = new FrmDodajRecenziju();
+                frmDodajRecenziju.ShowDialog();
+            }
+            else
+            {
+
+                FrmPrikazITrazi frmPrikazITrazi = new FrmPrikazITrazi();
+                Hide();
+                frmPrikazITrazi.ShowDialog();
+                Close();
+            }
+            
         }
 
         private void txtSifraRecenzije_TextChanged(object sender, EventArgs e)

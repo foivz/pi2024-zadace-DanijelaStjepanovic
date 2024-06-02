@@ -38,18 +38,20 @@ namespace Mezo
 
         private void UcitajTrazeneRecenzije1()
         {
-            List<Recenzija> recenzije = RepozitorijiRecenzija.SearchRecenzije1(txtTraziOkus.Text);
-            dgvPregledRecenzija.DataSource = recenzije;
+            List<Recenzija> recenzije1 = RepozitorijiRecenzija.SearchRecenzije1(txtTrazi.Text);
+            dgvPregledRecenzija.DataSource = recenzije1;
 
             dgvPregledRecenzija.AutoGenerateColumns = true;
+
         }
 
         private void UcitajTrazeneRecenzije2()
         {
-            List<Recenzija> recenzije = RepozitorijiRecenzija.SearchRecenzije2(txtTraziKolicina.Text);
-            dgvPregledRecenzija.DataSource = recenzije;
+            List<Recenzija> recenzije2 = RepozitorijiRecenzija.SearchRecenzije2(txtTraziKolicina.Text);
+            dgvPregledRecenzija.DataSource = recenzije2;
 
             dgvPregledRecenzija.AutoGenerateColumns = true;
+            
         }
         private void dgvPregledRecenzija_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -100,11 +102,11 @@ namespace Mezo
         private void btnPretrazi_Click(object sender, EventArgs e)
         {
 
-            string pretrazivanje1 = txtTraziOkus.Text;
-            string pretrazivanje2 = txtTraziOkus.Text;
-            if (pretrazivanje1 != null && pretrazivanje2 != null)
+            
+            string pretrazivanje2 = txtTraziKolicina.Text;
+           
+            if (pretrazivanje2 != null)
             {
-                UcitajTrazeneRecenzije1();
                 UcitajTrazeneRecenzije2();
             }
 
@@ -112,7 +114,46 @@ namespace Mezo
 
         private void txtTrazi_TextChanged(object sender, EventArgs e)
         {
+            if (int.TryParse(txtTrazi.Text, out int value))
+            {
+                if (value < 1 || value > 5)
+                {
+                    MessageBox.Show("Unos nije valjan! Probaj unijeti broj između 1 i 5!");
+                    txtTrazi.Text = string.Empty;
+                }
+            }
+            else if (!string.IsNullOrWhiteSpace(txtTrazi.Text))
+            {
+                MessageBox.Show("Unos nije valjan! Probaj unijeti broj između 1 i 5!");
+                txtTrazi.Text = string.Empty;
+            }
+        }
 
+        private void txtTraziKolicina_TextChanged(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtTraziKolicina.Text, out int value))
+            {
+                if (value < 1 || value > 5)
+                {
+                    MessageBox.Show("Unos nije valjan! Probaj unijeti broj između 1 i 5!");
+                    txtTraziKolicina.Text = string.Empty;
+                }
+            }
+            else if (!string.IsNullOrWhiteSpace(txtTraziKolicina.Text))
+            {
+                MessageBox.Show("Unos nije valjan! Probaj unijeti broj između 1 i 5!");
+                txtTraziKolicina.Text = string.Empty;
+            }
+        }
+
+        private void btnTraziOkus_Click(object sender, EventArgs e)
+        {
+            string pretrazivanje1 = txtTrazi.Text;
+            if (pretrazivanje1 != null)
+            {
+                UcitajTrazeneRecenzije1();
+
+            }
         }
     }
 }
